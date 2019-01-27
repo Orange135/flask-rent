@@ -1,0 +1,33 @@
+1. 图片验证码接口
+
+功能描述： 通过访问这个接口，可以获取验证码图片
+
+url: /image_codes/图片验证码编号
+     /image_codes/<image_code_id>
+
+method:  GET
+
+请求参数：  路径参数  （比如： 查询字符串、表单格式、json、xml）
+
+    名字              类型     是否必传      说明
+   image_code_id     str      是        图片验证码编号
+
+    示例： /image_codes/61dafc7d-626c-4856-9ff2-426402bc0392
+
+
+返回值：
+
+    正常: 验证码图片
+
+    异常： json格式
+
+    名字      类型     是否必传      说明
+    errcode   str      是         错误编号
+    errmsg    str      是         错误内容
+
+    示例：
+      {"errcode": "4001", "errmsg": "数据库异常"}
+
+
+
+
